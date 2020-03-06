@@ -22,19 +22,17 @@ function App() {
 
       {/* Iterate over imported array in userData */}
       <div className="users">
-      {
-        users.map(({name, location, car})=>{
-          return(
-            <div>
+        {users.map(({ name, location, car }, index) => {
+          return (
+            <div key={index}>
               <span>{name}</span>
               <br />
-            <span>{location}</span>
-            <br />
-            <span>{car}</span>
-              </div>
-          )
-        })
-      }
+              <span>{location}</span>
+              <br />
+              <span>{car}</span>
+            </div>
+          );
+        })}
       </div>
       <ScotchInfoBar />
     </div>
